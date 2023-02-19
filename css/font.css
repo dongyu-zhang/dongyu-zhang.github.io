@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "MiSans";
+    src: url('../font/MiSans-Regular.ttf');
+}
+@font-face {
+    font-family: "Pacifico";
+    src: url('../font/Pacifico-Regular.ttf');
+}
+body {
+    font-family: "MiSans";
+}
+#logo {
+    font-family: "Pacifico";
+}

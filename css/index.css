@@ -1,0 +1,203 @@
+*::selection {
+    background-color: orange;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*../background/background.webp*/
+	/*unsplash: https://source.unsplash.com/random/*/
+	/*Bing:https://api.dujin.org/bing/1920.php */
+    background-image: url("https://api.dujin.org/bing/1920.php");
+    background-size: cover;
+	background-repeat: no-repeat;
+} 
+
+/*导航*/
+header {
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+	padding: 0 50px;
+    height: 3rem;
+	width: 80%;
+    background-color: rgba(255, 127, 80, 0.8);
+    margin-top: 1%;
+    border-radius: 50px;   
+}
+.weather{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 120px;
+}
+#IP{
+	font-size: large;
+}
+
+.headbutton{
+    display: flex;
+    justify-content: center;   
+}
+.selectbutton{
+    display: flex;
+    flex-direction: column;
+    width: 6rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    transition: 0.3s;
+}
+.selectbutton li{
+    width: 6rem;
+    height: 0;
+    opacity: 0;
+    transition: 0.2s;
+    transform: translateY(-3rem);
+    list-style: none;
+}
+.selectbutton a{
+    text-decoration: none;
+    color: white;
+}
+.selectbutton span{
+    color: white;
+}
+.selectbutton:hover{
+    font-size: large;
+}
+.selectbutton:hover li{
+    width: 6rem;
+    height: 3rem;
+    opacity: 1;
+    transform: translateY(0);
+    font-size: medium;
+}
+
+/*侧边栏*/
+aside {
+    position: fixed;
+    top: 30%;
+    right: 0px;
+    display: flex;    
+}
+aside ul{
+    list-style: none;
+}
+.asidebutton{
+    display: flex;
+    justify-content: right;   
+    text-align: right;
+}
+.asidebutton img{
+    transition-duration: 0.3s;
+}
+.asidebutton a{
+    height: 50px;
+    line-height: 50px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+.asidebutton:hover a{
+    opacity: 1;
+}
+.asidebutton:hover img{
+    width: 50px;
+    height: 50px;
+}
+
+#logo{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+    font-size: x-large;
+    color: white;
+	margin-top: 10%;
+	padding-bottom: 0.2%;
+}
+
+/*快捷方式*/
+.link{
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    margin-top: 30px;
+	background-color: rgba(97, 97, 97, 0.6);
+	border-radius: 50px;
+	margin-top: 4%;
+	padding: 1%;
+}
+.icon{
+    display: flex;
+	flex-flow: wrap; 
+}
+.icon a{
+	display: flex;
+    height: 70px;
+    width: 80px;
+	align-items: center;
+	justify-content: center;
+}
+.icon a img{
+    transition: 0.2s;
+}
+.icon a:hover img{
+    width: 50px;
+    height: 50px;
+}
+
+/*页脚*/
+footer {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 2em;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: small;
+    line-height: 2em;
+}
+.contact{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 5px;
+    align-items: center;
+}
+.contact img{
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: 0.2s;
+}
+.contact span:hover+.weixin{
+    opacity: 1;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    margin-left: 3em;
+}
+
+/*百度搜索框*/
+.baidu {
+    text-align: center;
+}
+.baidu input{
+    width: 30vw;
+    height: 40px;
+    border-radius: 50px;
+    padding-left: 20px;
+    border-color: coral;
+    border-width: 3px;
+}
